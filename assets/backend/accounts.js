@@ -17,7 +17,7 @@ collectionForm.addEventListener('submit', (e) => {
 		gender: selectGender.value,
 		fees_type: selectFees.value,
 		amount: feesAmount.value,
-		// paid_date: paidDate.value,
+		paid_date: paidDate.value,
 	};
 
 	const res = fetch('http://localhost:4000/fees', {
