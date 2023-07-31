@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 </head>
 
 <body>
@@ -220,9 +221,9 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="students.html">Student List</a></li>
-                                <li><a href="student-details.html">Student View</a></li>
-                                <li><a href="add-student.html" class="active">Student Add</a></li>
-                                <li><a href="edit-student.html">Student Edit</a></li>
+
+                                <li><a href="add-student.html">Student Add</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -230,9 +231,9 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="teachers.html">Teacher List</a></li>
-                                <li><a href="teacher-details.html">Teacher View</a></li>
+
                                 <li><a href="add-teacher.html">Teacher Add</a></li>
-                                <li><a href="edit-teacher.html">Teacher Edit</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -383,7 +384,7 @@
                     <div class="col-sm-12">
                         <div class="card comman-shadow">
                             <div class="card-body">
-                                <form>
+                                <form class="stForm">
                                     <div class="row">
                                         <div class="col-12">
                                             <h5 class="form-title student-info">Student Information <span><a
@@ -393,19 +394,21 @@
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
                                                 <label>First Name <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text" placeholder="Enter First Name">
+                                                <input class="form-control fname" type="text"
+                                                    placeholder="Enter First Name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
                                                 <label>Last Name <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text" placeholder="Enter First Name">
+                                                <input class="form-control lname" type="text"
+                                                    placeholder="Enter Last Name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
                                                 <label>Gender <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
+                                                <select class="form-control select gender">
                                                     <option>Select Gender</option>
                                                     <option>Female</option>
                                                     <option>Male</option>
@@ -416,87 +419,53 @@
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms calendar-icon">
                                                 <label>Date Of Birth <span class="login-danger">*</span></label>
-                                                <input class="form-control datetimepicker" type="text"
+                                                <input class="form-control datetimepicker birthday" type="text"
                                                     placeholder="DD-MM-YYYY">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Roll </label>
-                                                <input class="form-control" type="text" placeholder="Enter Roll Number">
+                                                <label>Phone </label>
+                                                <input class="form-control phone" type="text"
+                                                    placeholder="Enter Phone Number">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Blood Group <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
+                                                <label>Group <span class="login-danger">*</span></label>
+                                                <select class="form-control select groupId">
                                                     <option>Please Select Group </option>
-                                                    <option>B+</option>
-                                                    <option>A+</option>
-                                                    <option>O+</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Religion <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
-                                                    <option>Please Select Religion </option>
-                                                    <option>Hindu</option>
-                                                    <option>Christian</option>
-                                                    <option>Others</option>
-                                                </select>
+                                                <label>Username<span class="login-danger">*</span></label>
+                                                <input class="form-control username" type="text"
+                                                    placeholder="Enter Username">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
                                                 <label>E-Mail <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text"
+                                                <input class="form-control email" type="text"
                                                     placeholder="Enter Email Address">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Class <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
-                                                    <option>Please Select Class </option>
-                                                    <option>12</option>
-                                                    <option>11</option>
-                                                    <option>10</option>
-                                                </select>
+                                                <label>Password</label>
+                                                <input class="form-control password" type="text"
+                                                    placeholder="Enter Password">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Section <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
-                                                    <option>Please Select Section </option>
-                                                    <option>B</option>
-                                                    <option>A</option>
-                                                    <option>C</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Admission ID </label>
-                                                <input class="form-control" type="text"
-                                                    placeholder="Enter Admission ID">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Phone </label>
-                                                <input class="form-control" type="text"
-                                                    placeholder="Enter Phone Number">
-                                            </div>
-                                        </div>
+
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group students-up-files">
                                                 <label>Upload Student Photo (150px X 150px)</label>
                                                 <div class="uplod">
                                                     <label class="file-upload image-upbtn mb-0">
-                                                        Choose File <input type="file">
+                                                        Choose File <input type="file" class="image">
                                                     </label>
                                                 </div>
                                             </div>
@@ -532,6 +501,9 @@
     <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/backend/student-add.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
 
 </html>

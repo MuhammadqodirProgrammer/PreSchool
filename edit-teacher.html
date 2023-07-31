@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 </head>
 
 <body>
@@ -220,9 +221,9 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="students.html">Student List</a></li>
-                                <li><a href="student-details.html">Student View</a></li>
+
                                 <li><a href="add-student.html">Student Add</a></li>
-                                <li><a href="edit-student.html">Student Edit</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu active">
@@ -230,9 +231,9 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="teachers.html">Teacher List</a></li>
-                                <li><a href="teacher-details.html">Teacher View</a></li>
+
                                 <li><a href="add-teacher.html">Teacher Add</a></li>
-                                <li><a href="edit-teacher.html" class="active">Teacher Edit</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -368,29 +369,34 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <form>
+                                <form class="editFormS">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h5 class="form-title"><span>Basic Details</span></h5>
+                                            <h5 class="form-title student-info">Teacher Information <span><a
+                                                        href="javascript:;"><i
+                                                            class="feather-more-vertical"></i></a></span></h5>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Teacher ID <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="PRE1234">
+                                                <label>First Name <span class="login-danger">*</span></label>
+                                                <input class="form-control editfname" type="text"
+                                                    placeholder="Enter First Name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Name <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="Vincent">
+                                                <label>Last Name <span class="login-danger">*</span></label>
+                                                <input class="form-control editlname" type="text"
+                                                    placeholder="Enter Last Name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
                                                 <label>Gender <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
-                                                    <option>Male</option>
+                                                <select class="form-control select editgender">
+                                                    <option>Select Gender</option>
                                                     <option>Female</option>
+                                                    <option>Male</option>
                                                     <option>Others</option>
                                                 </select>
                                             </div>
@@ -398,93 +404,48 @@
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms calendar-icon">
                                                 <label>Date Of Birth <span class="login-danger">*</span></label>
-                                                <input class="form-control datetimepicker" type="text"
-                                                    placeholder="29-04-2022">
+                                                <input class="form-control datetimepicker editbirthday" type="text"
+                                                    placeholder="DD-MM-YYYY">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Mobile <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="077 3499 9959">
+                                                <label>Phone </label>
+                                                <input class="form-control editphone" type="text"
+                                                    placeholder="Enter Phone Number">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms calendar-icon">
-                                                <label>Joining Date <span class="login-danger">*</span></label>
-                                                <input class="form-control datetimepicker" type="text"
-                                                    placeholder="29-04-2022">
-                                            </div>
-                                        </div>
+                                        
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Qualification <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text" value="Bachelor of Engineering">
+                                                <label>Username<span class="login-danger">*</span></label>
+                                                <input class="form-control editusername" type="text"
+                                                    placeholder="Enter Username">
                                             </div>
                                         </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>E-Mail <span class="login-danger">*</span></label>
+                                                <input class="form-control editemail" type="text"
+                                                    placeholder="Enter Email Address">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Password</label>
+                                                <input class="form-control editpassword" type="text"
+                                                    placeholder="Enter Password">
+                                            </div>
+                                        </div>
+
                                         <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Experience <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text" value="5">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <h5 class="form-title"><span>Login Details</span></h5>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Username <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="Vincent">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Email ID <span class="login-danger">*</span></label>
-                                                <input type="email" class="form-control" value="vincent20@gmail.com">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Password <span class="login-danger">*</span></label>
-                                                <input type="password" class="form-control" value="vincent">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Repeat Password <span class="login-danger">*</span></label>
-                                                <input type="password" class="form-control" value="vincent">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <h5 class="form-title"><span>Address</span></h5>
-                                        </div>
-                                        <div class="col-12 ">
-                                            <div class="form-group local-forms">
-                                                <label>Address <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="3979 Ashwood Drive">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>City <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="Omaha">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>State <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="Omaha">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Zip Code <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="3979">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Country <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" value="USA">
+                                            <div class="form-group students-up-files">
+                                                <label>Upload Student Photo (150px X 150px)</label>
+                                                <div class="uplod">
+                                                    <label class="file-upload image-upbtn mb-0">
+                                                        Choose File <input type="file" class="editimage">
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -518,6 +479,9 @@
     <script src="assets/plugins/select2/js/select2.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/backend/singleTeacher.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
 
 </html>
