@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 </head>
 
 <body>
@@ -355,7 +356,7 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <form>
+                                <form class="exem-form">
                                     <div class="row">
                                         <div class="col-12">
                                             <h5 class="form-title"><span>Exam Information</span></h5>
@@ -363,7 +364,7 @@
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label>Exam Name</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
@@ -391,31 +392,32 @@
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label>Subject</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control subject">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label>Fees</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control fees">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label>Start Time</label>
-                                                <input type="time" class="form-control">
+                                                <input type="time" class="form-control start_time">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label>End Time</label>
-                                                <input type="time" class="form-control">
+		purchase_date: start_time.value,
+                                                <input type="time" class="form-control and_time ">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
                                                 <label>Event Date</label>
-                                                <input type="date" class="form-control">
+                                                <input type="date" class="form-control event_date">
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -444,6 +446,8 @@
     <script src="assets/plugins/select2/js/select2.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/backend/add-exem.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
