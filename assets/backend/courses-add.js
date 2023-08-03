@@ -8,7 +8,7 @@ async function createCourse(courseData) {
       },
       body: JSON.stringify(courseData),
     });
-
+// if no
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
