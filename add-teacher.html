@@ -26,11 +26,13 @@
     <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 </head>
 
 <body>
 
     <div class="main-wrapper">
+
 
         <div class="header">
 
@@ -220,9 +222,9 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="students.html">Student List</a></li>
-                                <li><a href="student-details.html">Student View</a></li>
+
                                 <li><a href="add-student.html">Student Add</a></li>
-                                <li><a href="edit-student.html">Student Edit</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu active">
@@ -230,9 +232,9 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="teachers.html">Teacher List</a></li>
-                                <li><a href="teacher-details.html">Teacher View</a></li>
+
                                 <li><a href="add-teacher.html" class="active">Teacher Add</a></li>
-                                <li><a href="edit-teacher.html">Teacher Edit</a></li>
+
                             </ul>
                         </li>
                         <li class="submenu">
@@ -368,29 +370,34 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <form>
+                                <form class="stForm">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h5 class="form-title"><span>Basic Details</span></h5>
+                                            <h5 class="form-title student-info">Teacher Information <span><a
+                                                        href="javascript:;"><i
+                                                            class="feather-more-vertical"></i></a></span></h5>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Teacher ID <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Teacher ID">
+                                                <label>First Name <span class="login-danger">*</span></label>
+                                                <input class="form-control fname" type="text"
+                                                    placeholder="Enter First Name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Name <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter Name">
+                                                <label>Last Name <span class="login-danger">*</span></label>
+                                                <input class="form-control lname" type="text"
+                                                    placeholder="Enter Last Name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
                                                 <label>Gender <span class="login-danger">*</span></label>
-                                                <select class="form-control select">
-                                                    <option>Male</option>
+                                                <select class="form-control select gender">
+                                                    <option>Select Gender</option>
                                                     <option>Female</option>
+                                                    <option>Male</option>
                                                     <option>Others</option>
                                                 </select>
                                             </div>
@@ -398,94 +405,49 @@
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms calendar-icon">
                                                 <label>Date Of Birth <span class="login-danger">*</span></label>
-                                                <input class="form-control datetimepicker" type="text"
+                                                <input class="form-control datetimepicker birthday" type="text"
                                                     placeholder="DD-MM-YYYY">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Mobile <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter Phone">
+                                                <label>Phone </label>
+                                                <input class="form-control phone" type="text"
+                                                    placeholder="Enter Phone Number">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms calendar-icon">
-                                                <label>Joining Date <span class="login-danger">*</span></label>
-                                                <input class="form-control datetimepicker" type="text"
-                                                    placeholder="DD-MM-YYYY">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4 local-forms">
-                                            <div class="form-group">
-                                                <label>Qualification <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text"
-                                                    placeholder="Enter Joining Date">
-                                            </div>
-                                        </div>
+             
+                                        
                                         <div class="col-12 col-sm-4">
                                             <div class="form-group local-forms">
-                                                <label>Experience <span class="login-danger">*</span></label>
-                                                <input class="form-control" type="text" placeholder="Enter Experience">
+                                                <label>Username<span class="login-danger">*</span></label>
+                                                <input class="form-control username" type="text"
+                                                    placeholder="Enter Username">
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <h5 class="form-title"><span>Login Details</span></h5>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>E-Mail <span class="login-danger">*</span></label>
+                                                <input class="form-control email" type="text"
+                                                    placeholder="Enter Email Address">
+                                            </div>
                                         </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group local-forms">
+                                                <label>Password</label>
+                                                <input class="form-control password" type="text"
+                                                    placeholder="Enter Password">
+                                            </div>
+                                        </div>
+
                                         <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Username <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter Username">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Email ID <span class="login-danger">*</span></label>
-                                                <input type="email" class="form-control" placeholder="Enter Mail Id">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Password <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter Password">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Repeat Password <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Repeat Password">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <h5 class="form-title"><span>Address</span></h5>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-group local-forms">
-                                                <label>Address <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter address">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>City <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter City">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>State <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter State">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Zip Code <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter Zip">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <div class="form-group local-forms">
-                                                <label>Country <span class="login-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Enter Country">
+                                            <div class="form-group students-up-files">
+                                                <label>Upload Teacher Photo (150px X 150px)</label>
+                                                <div class="uplod">
+                                                    <label class="file-upload image-upbtn mb-0">
+                                                        Choose File <input type="file" class="image">
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -519,6 +481,9 @@
     <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/backend/teacher-add.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
 
 </html>
